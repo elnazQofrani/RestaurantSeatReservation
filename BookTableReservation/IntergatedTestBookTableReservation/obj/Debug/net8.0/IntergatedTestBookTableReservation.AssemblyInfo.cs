@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IntergatedTestBookTableReservation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab6fa79db2e37c9c53bd69efeb92b8ae66c06761")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d455c7293d93f51cce4ffd07bc2c45472be89e49")]
 [assembly: System.Reflection.AssemblyProductAttribute("IntergatedTestBookTableReservation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IntergatedTestBookTableReservation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
