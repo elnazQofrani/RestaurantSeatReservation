@@ -18,9 +18,7 @@ namespace BookTableReservation.Services
 
         public async Task<Customer> GetCustomerByIdAsync(int customerId)
         {
-            var customer =  await customerRepository.GetById(customerId);
-            return customer;
-
+            return  await customerRepository.GetById(customerId);
         }
     }
 }

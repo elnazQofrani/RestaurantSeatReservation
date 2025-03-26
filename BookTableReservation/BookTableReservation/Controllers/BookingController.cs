@@ -10,6 +10,18 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookTableReservation.Controllers
 {
+    
+    //Serilog
+    /// <summary>
+    /// https://github.com/MeladKamari/Melad.Common/blob/master/Directory.Packages.props
+    /// </summary>
+    ///
+    /// Scrutor
+    ///
+    ///   <PackageVersion Include="Serilog" Version="3.1.1" />
+    // <PackageVersion Include="Serilog.Settings.Configuration" Version="8.0.0" />
+    // <PackageVersion Include="Serilog.AspNetCore" Version="8.0.1" />
+    // <PackageVersion Include="Serilog.Sinks.Console" Version="5.0.1" />
     [Route("api/[controller]")]
     [ApiController]
     public class BookingController : ControllerBase
@@ -27,6 +39,9 @@ namespace BookTableReservation.Controllers
             this._seatService = _seatService;
         }
 
+        // https://github.com/MeladKamari/Melad.Common
+        //Fluent Validation
+        // https://fluentvalidation.net/
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] BookingDto bookingDto)
         {
@@ -40,7 +55,7 @@ namespace BookTableReservation.Controllers
             if (!isSeatAvailable)
                 return BadRequest("Seat is pre booked");
             var booking = mapper.Map<Booking>(bookingDto);
-            booking.Status = BookingStatus.Confirmed;
+            booking.SetBookingStatus(BookingStatus.Confirmed);
             var result = await _bookingRepository.CreatAsync(booking);
             return Ok(new { Message = "Seat booked successfully", BookingId = result.Id });
         }

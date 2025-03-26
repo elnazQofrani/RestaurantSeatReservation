@@ -1,8 +1,9 @@
-﻿using BookTableReservation.Enums;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace BookTableReservation.Models
 {
+    
+    //FluentValidation
     public class BookingDto
     {
         [Required]
